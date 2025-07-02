@@ -1,0 +1,16 @@
+            - nombre: atymic/deployer-php-action
+  # Puedes anclar al commit exacto o a la versión.
+  # usos: atymic/deployer-php-action@cce448668ef94751f8cac508220c392de74b018a
+  usos: atymic/deployer-php-action@0.3.1
+  con:
+    # Clave SSH para usar durante la implementación
+    clave privada ssh:
+    # Archivo de hosts conocidos de SSH
+    ssh-known-hosts: # opcional
+    # Desactivar la comprobación de la clave del host (¡inseguro!)
+    ssh-disable-host-key-checking: # opcional
+    # Versión del implementador a instalar
+    versión del implementador: # opcional
+    # Omitir la instalación del implementador (si está utilizando una versión instalada localmente)
+    implementador-skip-install: # opcional
+          
