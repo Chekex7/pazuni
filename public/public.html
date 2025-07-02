@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/public.css">
+    <title>Sistema de Justicia</title>
+ 
+</head>
+<body>
+    <header>
+        <h1>Sistema de Justicia y Paz</h1>
+    </header>
+    
+    <div class="menu-container">
+        <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li>
+                <a href="#">Login</a>
+                <ul class="submenu">
+                    <li><a href="public/login.php">Ingresar como Ciudadano</a></li>
+                   <!-- <li><a href="public/loginj.php">Ingresar como JDP</a></li> -->
+                    
+                    
+                </ul>
+            </li>
+            <li>
+                <a href="#">Registro</a>
+                <ul class="submenu">
+                    <li><a href="public/registro.php">Registro como Ciudadano</a></li>
+                    <!-- <li><a href="public/register.php">Registro como JDP</a></li> -->
+                </ul>
+            </li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Quienes Somos</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="config/conexion.php">Ayuda</a></li>
+            <li><a href="config/conexion.php">Conex</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <h2>Bienvenido a nuestro sitio</h2>
+        <p>Este es un ejemplo básico de una página HTML con un menú desplegable responsive que se adapta a diferentes tamaños de pantalla.</p>
+        <p>En dispositivos móviles, el menú se mostrará en vertical y los submenús se activarán al hacer clic.</p>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // JavaScript para manejar el menú en móviles
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.menu li');
+            
+            if (window.innerWidth <= 600) {
+                menuItems.forEach(item => {
+                    if (item.querySelector('.submenu')) {
+                        const link = item.querySelector('a');
+                        link.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            item.classList.toggle('active');
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
